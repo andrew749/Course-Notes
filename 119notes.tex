@@ -66,5 +66,10 @@ Taylor Theorem\\
 $f(x)=P{(n,x_0)}(x)+\int_{x_0}^x \frac{(x-t)^n}{n!} f^{n+1}(t) \mathrm{d}t$
 
 We know that the remainder must be equal to the actual function minus the taylor polynomial by definition. 
-Accept that $|f^{n+1}(t)|<=k$ for all $t \epsilon [x_0,x]$
+Accept that $|f^{n+1}(t)|<=k$ for all $t \epsilon [x_0,x]$\\
+Error is equal to :
+
+$|f(x)-P_{(n,x_0)}(x)| \leq | \int_{x_0}^x \frac{(x-t)^n}{n!} f^{n+1}(t) \mathrm{d}t| \leq \frac{k}{(n+1)!} |x-x_0|^{n+1}$
+\subsubsection{Infinite Series}
+
 \end{document}
