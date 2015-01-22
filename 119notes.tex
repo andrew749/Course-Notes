@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+\begin{document}
+
+\title{MATH119}
+
+\section{Approximation Methods}
+\subsection{Linear Approximation}
+Can form a tangent line of f(x) at a with the derivative f'(x)
+\begin{equation}
+L(x)=f(a)+f'(a)(x-a)
+\end{equation}
+\subsubsection{Solution Methods}
+\paragraph{Bisection Method}
+\begin{enumerate}
+\item Determine interval (a,b) on which function has a root.
+\item Divide interval into sub intervals: $(a,\frac{a_b}{2}),(\frac{a+b}{2},b)$
+\item Determine which interval solution lives in.
+\item Apply 2 again with smaller interval
+\end{enumerate}
+Repeat until reach desired accuracy.
+\paragraph{Newtons method}
+Rearrange linearization to $x_(n+1)=x_n-\frac{f(x_n)}{f'(x_n)}$
+\paragraph{Fixed Point Iteration}
+Let f(x) be differentiable and suppose f(x) has a solution. If |f'(x)|<1 for all values of x within an interval of the fixed point then FPI converges for any x.
+
+Basically rearrange equation for x and use result of one solution as argument for next.
+
+If guess is not close though function WILL diverge.
+\subsection{Polynomial Interpolation}
+2 points can determine a line in $R^2$
+3 points determine a quadratic in $R^2$
+\subsubsection{Newton Forward Difference Formula}
+\begin{equation}
+y=y_0+(x-x_0)\frac{\triangle y_0}{\triangle x}+ \dots \frac{x(x-x_0)(x-x_1)...(x-(n-1))\triangle^n y_0}{h^n n!}
+\end{equation}
+Where h is the difference in space between elements and $x_n=x_0+nh$
+\subsubsection{Taylor Polynomial}
+\begin{equation}
+P_(k,x_0)(x)=\sum\limits_{n=0}^k \frac{f^n x_0(x-x_0)^n}{n!}
+\end{equation} 
+Far away from $x_0$ the approximations can get bad.
+\begin{equation}
+a_k=\frac{1}{k!} f^{(k)}(x_0)
+\end{equation}
+\paragraph{Example $f(x)=e^{x^2}$}
+Find for $P_{(4,0)}(x)$ for $e^t$\newline
+\begin{align}
+P_{(4,0)}(t)=1+t+1/2t^2+1/6t^3+a/24t^4\\
+P_{(8,0)}(t)=1+x^2+1/2x^4+1/6x^6+a/24x^8
+\end{align}
+
+Mclaurin TP with $x_0=0$
+
+
+
+Fundamental theorem of Calculus: if F'(x)=f(x) 
+then\\
+\begin{equation}
+\int_a^b f(t) \mathrm{d}t=F(b)-F(a)
+\end{equation}
+Taylor Theorem\\
+$f(x)=P{(n,x_0)}(x)+\int_{x_0}^x \frac{(x-t)^n}{n!} f^{n+1}(t) \mathrm{d}t$
+
+We know that the remainder must be equal to the actual function minus the taylor polynomial by definition. 
+Accept that $|f^{n+1}(t)|<=k$ for all $t \epsilon [x_0,x]$
+\end{document}
