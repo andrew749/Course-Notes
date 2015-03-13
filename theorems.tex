@@ -74,16 +74,35 @@ $ax\equiv c mod m$ is a linear congruence. solution if x so that congruence is
 true.
 \subsubsection{Linear congruence Theorem 1 LCT1}
 Let $gcd(a,m)=d\neq 0$ The linear congruence $ax\equiv c mod m$ has a solution
-iff $d\mid c$. Also if x_0 is a solution then complete solution is $x\equiv x_0
+iff $d\mid c$. Also if $x_0$ is a solution then complete solution is $x\equiv x_0
 mod \frac{m}{d}$
 \subsubsection{Linear Congruence Theorem 2, LCT2}
-Let $gcd(a,m)=d\neq 0$. The equation $[a][c]=[c]$ in Z_m has a solution iff
+Let $gcd(a,m)=d\neq 0$. The equation $[a][c]=[c]$ in $Z_m$ has a solution iff
 $d\mid c$
 \subsection{Chinese Remainder Theorem}
 Let $a_1, a_2 \epsilon Z$ If $gcd(m_1, m_2)=1$ then the simultaneous linear
 congruences $n\equiv a_1mod m_1$ and $n\equiv a_2 mod m_2 $ have a unique
-solution modulo $m_1m_2$ Thus is n=n_0 is one integer solution then the
+solution modulo $m_1m_2$ Thus is n=$n_0$ is one integer solution then the
 complete solution is $n\equiv n_0 mod m_1 m_2$
 \section{RSA}
+\subsection{Setting up RSA}
+\begin{enumerate}
+
+  \item choose two large distinct primes p and q and let n=pq.
+  \item select an integer e so that $gcd(e,(p-1)(q-1))=1$ and $1<e<(p-1)(q-1)$
+  \item solve $ed\equiv 1(mod (p-1)(q-1))$for an integer $1<d<(p-1)(q-1)$
+  \item public key is (e,m) and private key is (d,n)
+\end{enumerate}
+\subsection{sending a message}
+\begin{enumerate}
+  \item look up public key(e,n)
+  \item generate an integer message M $0\leq M < n$
+  \item compute the ciphertext C $M^e\equiv C mod n$ where $0\leq C < n$
+\end{enumerate}
+\subsection{receiving a message}
+\begin{enumerate}
+  \item use the private key (d,n)
+  \item compute message text R from C $C^d\equiv R (mod n)$ where $0\leq R <n$
+\end{enumerate}
 \end{document}
 
