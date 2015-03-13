@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+\noindent 
+Andrew Codispoti\\
+20554012\\
+105
+\section{}
+$\int_0^1{sin(3t^2)}\,dt$\\
+Let $g(x)=sin(u), u=3t^2$
+\begin{align*}
+g(0)&=0\\
+g'(0)&=cos(u)=1\\
+g''(0)&=-sin(u)=0\\
+g^3(0)&=-cos(u)=-1\\
+g^4(0)&=sin(u)=0\\
+g^5(0)&=cos(u)=1
+\end{align*}
+\begin{equation}
+P_{5,0}(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}
+\end{equation}
+Substituting $x=3t^2$
+\begin{equation}
+P_{10,0}(t)=3t^2-\frac{27t^6}{6}+\frac{243t^{10}}{120}
+\end{equation} 
+\begin{equation}
+P_{11,0}(x)=\int_0^x{3t^2-\frac{27t^6}{6}+\frac{243t^{10}}{120}}dt
+\end{equation}
+\begin{equation}
+\int_0^1f(t)=\int_0^1{P_{10,0}}(t)+\int_0^1{R_{5,0}(u)}
+\end{equation}
+\begin{align*}
+t\ \epsilon[0,1],\ \  u\ \epsilon[0,3]
+\end{align*}
+\begin{equation}
+\lvert R_{5,0}(u) \rvert\leq \lvert f^{(6)}(3)\rvert\leq -sin(3)\leq .15
+\end{equation}
+\begin{align}
+\lvert R_{5,0}(u) \rvert \leq \frac{.15(3)^6}{6!}\\
+\leq .15187
+\end{align}
+Check:
+\begin{align}
+\int_0^1sin(3t^2)dt-\int_0^1{P_{10,0}}(t)=.514976-.541234=
+\end{align}
+\section{}
+
+\section{}
+\section{}
+
+\end{document}
