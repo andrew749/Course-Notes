@@ -70,6 +70,20 @@ For any integer a and any prime p $a^p\equiv a mod p$
 Let p be a prime. if $[a]$ is any non zero element in $Z_p$ then there exists an
 element $[b]\epsilon Z_p$ so that $[a]*[b]=1$
 \subsection{Linear Congruences}
-
+$ax\equiv c mod m$ is a linear congruence. solution if x so that congruence is
+true.
+\subsubsection{Linear congruence Theorem 1 LCT1}
+Let $gcd(a,m)=d\neq 0$ The linear congruence $ax\equiv c mod m$ has a solution
+iff $d\mid c$. Also if x_0 is a solution then complete solution is $x\equiv x_0
+mod \frac{m}{d}$
+\subsubsection{Linear Congruence Theorem 2, LCT2}
+Let $gcd(a,m)=d\neq 0$. The equation $[a][c]=[c]$ in Z_m has a solution iff
+$d\mid c$
+\subsection{Chinese Remainder Theorem}
+Let $a_1, a_2 \epsilon Z$ If $gcd(m_1, m_2)=1$ then the simultaneous linear
+congruences $n\equiv a_1mod m_1$ and $n\equiv a_2 mod m_2 $ have a unique
+solution modulo $m_1m_2$ Thus is n=n_0 is one integer solution then the
+complete solution is $n\equiv n_0 mod m_1 m_2$
+\section{RSA}
 \end{document}
 
