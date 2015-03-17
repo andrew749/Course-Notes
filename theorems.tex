@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \begin{document}
 \section{GCD Theorems}
 \subsection{GCD WR}
@@ -36,17 +37,17 @@ Let m be a fixed positive integer. If $a,b \epsilon Z$ we say that a is
 congruent to b modulo m. $a\equiv b mod m$ if $m\mid (a-b)$. If $m \nmid (a-b)$
 then $a\neq mod m$
 \subsection{Equivalence relation}
-\begin{enum}
+\begin{enumerate}
 \item $a\equiv b mod m$
 \item If $a\equiv b mod m $ then $b\equiv a mod m$
 \item If $a\equiv b mod m$ and $b\equiv c mod m$ then $a\equiv c mod m$
-\end{enum}
+\end{enumerate}
 \subsection{properties of congruence}
-\begin{enum}
-\item $a+b\equiv a'+b' mod m$
+\begin{enumerate}
+  \item $a+b\equiv a'+b' mod m$
 \item $a-b\equiv a'-b'mod m$
 \item $ab\equiv a'b'mod m$
-\end {enum}
+\end {enumerate}
 \subsection{Congruences and Division}
 If $ac\equiv bc mod m$ and $gcd(c,m)=1$ then $a\equiv b mod m$
 \subsection{Congruent IFF Same remainder}
@@ -104,5 +105,27 @@ complete solution is $n\equiv n_0 mod m_1 m_2$
   \item use the private key (d,n)
   \item compute message text R from C $C^d\equiv R (mod n)$ where $0\leq R <n$
 \end{enumerate}
+\section{Complex Numbers}
+\textbf{Complex Numbers:}An expression of the $C= {x+yi \mid x,y \epsilon R}$
+where x and y are real numbers. Has a real and imaginary part.
+\begin{enumerate}{Mathematical operations}
+  \item $a+bi==c+di \leftrightarrow a=c & b=d$
+  \item $(a+bi)+(c+di)=(a+c)+(b+d)i$
+  \item $(a+bi)(c+di)=(ac-bd)+(ad+bc)i$
+\end{enumerate}
+\begin{enumerate}
+  \item Associativity of addition $(u+v)+z=u+(v+z)$
+  \item Commutativity of addition $(u+v)=v+u$
+  \item additive identity $0+0i$
+  \item Additive inverse $-z=-x-yi$
+  \item Associativity of multiplication $(u*v)*z=u*(v*z)$
+  \item Commutativity of multiplication $(u*v)=v*u$
+  \item multiplicative identity $1=1+0i$
+  \item multiplicative inverse $z=x+yi \frac{x-yi}{x^2+y^2}$
+\end{enumerate}
+\subsection{Complex conjugate}
+complex conjugate of $z=x+yi$ is \ $ \overline{z}=x-y$
+\subsection{Modulus}
+Modulus of $z=x+yi$ $\abs{z}=\abs{x+yi}=\sqrt{x^2+y^2}$
 \end{document}
 
