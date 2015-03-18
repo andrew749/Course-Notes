@@ -5,51 +5,51 @@
 \section{GCD Theorems}
 \subsection{GCD WR}
 If a and b are integers not both zero, and q and r are integers such that
-$a=qb+r$, then gcd(a,b)=gcd(b,r)
+$a=qb+r$, then $\gcd(a,b)=\gcd(b,r)$
 \subsection{GCD CT (GCD characterization theorem)}
 If d is a positive common divisor of the integers a and b, and there exist
-integers x and y so that $ax+by=d$,then $d=gcd(a,b)$.
+integers x and y so that $ax+by=d$,then $d=\gcd(a,b)$.
 \subsection{Coprimeness and Divisibility}
-If a,b, and c are integers and $c\mid ab$ and $gcd(a,c)=1$, then $c\mid b$
+If a,b, and c are integers and $c\mid ab$ and $\gcd(a,c)=1$, then $c\mid b$
 \subsection{Primes and Divisibility}
 If p is a prime and $p\mid ab$ then $p\mid a$ or $p\mid b$
 \subsection{GCD of One}
-Let a and b be integers. Then $gcd(a,b)=1 \iff ax+by=1$ where x and y are
+Let a and b be integers. Then $\gcd(a,b)=1 \iff ax+by=1$ where x and y are
 integers.
 \subsection{Division by the GCD}
-Let a and b be integers. If $gcd(a,b)=d\neq 0$, then $gcd(\frac{a}{d},
+Let a and b be integers. If $\gcd(a,b)=d\neq 0$, then $\gcd(\frac{a}{d},
 \frac{b}{d})=1$.
 \section{EEA}
 \subsection{Extended Euclidean Algorithm}
-If $a>b>0$ are positive integers, then $d=gcd(a,b)$ can be computed and there
+If $a>b>0$ are positive integers, then $d=\gcd(a,b)$ can be computed and there
 exist integers x and y so that $ax+by=d$.
 \section{Linear Diophatine Equations}
 Equations with integer co-efficients for which integer solutions are sought.
 \subsection{Linear Diophatine Equation Theorem, Part 1 LDET1}
-Let gcd(a,b)=d. The linear Diophatine equation $ax+by=c$ has a solution iff
+Let gcd (a,b)=d. The linear Diophatine equation $ax+by=c$ has a solution iff
 $d\mid c$
 \subsection{Linear Diophatine Equation Theorem 2, LDET2}
-Let $gcd(a,b)=d$ where both a and b are not zero. If $x=x_0$ and $y=y_0$ is one
+Let $\gcd(a,b)=d$ where both a and b are not zero. If $x=x_0$ and $y=y_0$ is one
 particular integer solution to the equation $ax+by=d$ then the complete
 solution is $x=x_0+\frac{b}{d} n$, $y=y_0-\frac{a}{d} n \forall \epsilon Z$
 \section{Congruence}
 Let m be a fixed positive integer. If $a,b \epsilon Z$ we say that a is
-congruent to b modulo m. $a\equiv b mod m$ if $m\mid (a-b)$. If $m \nmid (a-b)$
-then $a\neq mod m$
+congruent to b modulo m. $a\equiv b \mod{m}$ if $m\mid (a-b)$. If $m \nmid (a-b)$
+then $a\neq \mod{m}$
 \subsection{Equivalence relation}
 \begin{enumerate}
-\item $a\equiv b mod m$
-\item If $a\equiv b mod m $ then $b\equiv a mod m$
-\item If $a\equiv b mod m$ and $b\equiv c mod m$ then $a\equiv c mod m$
+  \item{$a\equiv b \mod{m}$}
+  \item{If $a\equiv b \mod{m} $ then $b\equiv a \mod{m}$}
+  \item{If $a\equiv b \mod{m}$ and $b\equiv c \mod{m}$ then $a\equiv c \mod{m}$}
 \end{enumerate}
 \subsection{properties of congruence}
 \begin{enumerate}
-  \item $a+b\equiv a'+b' mod m$
-\item $a-b\equiv a'-b'mod m$
-\item $ab\equiv a'b'mod m$
-\end {enumerate}
+  \item{$a+b\equiv a'+b' \mod{m}$}
+  \item{$a-b\equiv a'-b'\mod{m}$}
+  \item{$ab\equiv a'b'\mod{m}$}
+\end{enumerate}
 \subsection{Congruences and Division}
-If $ac\equiv bc mod m$ and $gcd(c,m)=1$ then $a\equiv b mod m$
+If $ac\equiv bc \mod{m}$ and $\gcd(c,m)=1$ then $a\equiv b \mod{m}$
 \subsection{Congruent IFF Same remainder}
 $a\equiv b mod m$ iff a and b have the same remainder when divided by m.
 \subsection{Modular Arithmetic}
@@ -68,10 +68,10 @@ If p is a prime number that does not divide the integer a, then $a^{p-1}
 \equiv 1 mod p$
 For any integer a and any prime p $a^p\equiv a mod p$
 \subsubsection{Existence of Inverse}
-Let p be a prime. if $[a]$ is any non zero element in $Z_p$ then there exists an
+Let p be a prime.\ if $[a]$ is any non zero element in $Z_p$ then there exists an
 element $[b]\epsilon Z_p$ so that $[a]*[b]=1$
 \subsection{Linear Congruences}
-$ax\equiv c mod m$ is a linear congruence. solution if x so that congruence is
+$ax\equiv c mod m$ is a linear congruence.\ solution if x so that congruence is
 true.
 \subsubsection{Linear congruence Theorem 1 LCT1}
 Let $gcd(a,m)=d\neq 0$ The linear congruence $ax\equiv c mod m$ has a solution
@@ -106,12 +106,12 @@ complete solution is $n\equiv n_0 mod m_1 m_2$
   \item compute message text R from C $C^d\equiv R (mod n)$ where $0\leq R <n$
 \end{enumerate}
 \section{Complex Numbers}
-\textbf{Complex Numbers:}An expression of the $C= {x+yi \mid x,y \epsilon R}$
+\textbf{Complex Numbers:}An expression of the form \  $C= {x+yi \mid x,y \epsilon R}$
 where x and y are real numbers. Has a real and imaginary part.
 \begin{enumerate}{Mathematical operations}
-  \item $a+bi==c+di \leftrightarrow a=c & b=d$
-  \item $(a+bi)+(c+di)=(a+c)+(b+d)i$
-  \item $(a+bi)(c+di)=(ac-bd)+(ad+bc)i$
+  \item{$a+bi=c+di \leftrightarrow a=c & b=d$}
+  \item{$(a+bi)+(c+di)=(a+c)+(b+d)i$}
+  \item{$(a+bi)(c+di)=(ac-bd)+(ad+bc)i$}
 \end{enumerate}
 \begin{enumerate}
   \item Associativity of addition $(u+v)+z=u+(v+z)$
