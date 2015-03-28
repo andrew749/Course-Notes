@@ -1,6 +1,8 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
 \begin{document}
 \section{GCD Theorems}
 \subsection{GCD WR}
@@ -51,10 +53,10 @@ then $a\neq \mod{m}$
 \subsection{Congruences and Division}
 If $ac\equiv bc \mod{m}$ and $\gcd(c,m)=1$ then $a\equiv b \mod{m}$
 \subsection{Congruent IFF Same remainder}
-$a\equiv b mod m$ iff a and b have the same remainder when divided by m.
-\subsection{Modular Arithmetic}
+$a\equiv b \mod(m)$ iff a and b have the same remainder when divided by m.
+\subsection{modular Arithmetic}
 \subsubsection{Congruence class}
-$[a]={x\epsilon Z\mid x\equiv a mod m}$
+$[a]={x\epsilon Z\mid x\equiv a \mod(m)}$
 \\
 $Z_m$ is the set of m congruence classes. $[a]+[b]=[a+b]$ and $[a]*[b]=[a*b]$
 \subsubsection{Identity}
@@ -65,8 +67,8 @@ Subtraction is the addition of inverse.
 Division is multiplication with inverse.
 \subsection{Fermat's Little Theorem}
 If p is a prime number that does not divide the integer a, then $a^{p-1}
-\equiv 1 mod p$
-For any integer a and any prime p $a^p\equiv a mod p$
+\equiv 1 \mod(p)$
+For any integer a and any prime p $a^p\equiv a \mod p$
 \subsubsection{Existence of Inverse}
 Let p be a prime.\ if $[a]$ is any non zero element in $Z_p$ then there exists an
 element $[b]\epsilon Z_p$ so that $[a]*[b]=1$
@@ -82,8 +84,8 @@ Let $gcd(a,m)=d\neq 0$. The equation $[a][c]=[c]$ in $Z_m$ has a solution iff
 $d\mid c$
 \subsection{Chinese Remainder Theorem}
 Let $a_1, a_2 \epsilon Z$ If $gcd(m_1, m_2)=1$ then the simultaneous linear
-congruences $n\equiv a_1mod m_1$ and $n\equiv a_2 mod m_2 $ have a unique
-solution modulo $m_1m_2$ Thus is n=$n_0$ is one integer solution then the
+congruences $n\equiv a_1mod m_1$ and $n\equiv a_2 \mod m_2 $ have a unique
+solution \modulo $m_1m_2$ Thus is n=$n_0$ is one integer solution then the
 complete solution is $n\equiv n_0 mod m_1 m_2$
 \section{RSA}
 \subsection{Setting up RSA}
@@ -125,8 +127,8 @@ where x and y are real numbers. Has a real and imaginary part.
 \end{enumerate}
 \subsection{Complex conjugate}
 complex conjugate of $z=x+yi$ is \ $ \overline{z}=x-y$
-\subsection{Modulus}
-Modulus of $z=x+yi$ $|z|=|x+yi|=\sqrt{x^2+y^2}$
+\subsection{modulus}
+modulus of $z=x+yi$ $|z|=|x+yi|=\sqrt{x^2+y^2}$
 \subsection{Polar multiplication of Complex Numbers}
 If $z_1=r_1(cos\theta + isin\theta)$ and $z_2=r_2(cos\theta +isin\theta)$ are
 two complex numbers in polar form then
@@ -145,5 +147,28 @@ $(e^{i\theta})^n=e^{in\theta}$
 if $r(cos\theta + isin\theta)$ is in the polar form of a complex number a, then
 the solutions are $\sqrt[n]{r}(cos(\frac{\theta + 2\pi
   k}{n})+isin(\frac{\theta+2\pi k}{n}))$
+\section{Polynomials}
+\subsection{Definition}
+A polynomial in x over the field \mathbb{F} is an expression of the form
+$a_n*x^n + a_{n+1}x^{n-1} + \cdots +a_1x+a_0$ all of the a's are
+coefficients.\\
+If $a_n\neq0$ in $a_n*x^n + a_{n+1}x^{n-1} + \cdots +a_1x+a_0$ Then  polynomial
+has degree n. Zero has all coefficients 0 and degree undefined.
+\subsection{Equality}
+only equal if $a_i=b_i$ for all a,b
+\subsection{Sum}
+sum of f(x) and g(x) is $f(x)+g(x)=\sum_{i=0}^{max(n,m)}(a_i+b_i)x^i$ with any
+missing terms coefficient 0.
+\subsection{Difference}
+difference of f(x) and g(x) is $f(x)-g(x)=\sum_{i=0}^{max(n,m)}(a_i-b_i)x^i$ with any
+missing terms coefficient 0.
+\subsection{Products}
+product of f(x) and g(x) is $f(x)*g(x)=\sum_{i=0}^{n+m}c_ix^i$where
+$c_i=\sum_{j=0}^{i} a_jb_{i-j}$
+\subsection{Division algorithm for polynomials DAP}
+If f(x) and g(x) are polynomials in \mathbb{F}[x] and g(x) is not the zero
+polynomial, then there exist unique polynomials q(x) and r(x) in \mathbb{F}
+such that $f(x)=q(x)g(x) +r(x)$ where $deg(r(x))<deg(g(x))$
+\includegraphics{p95.gif}
 \end{document}
 
