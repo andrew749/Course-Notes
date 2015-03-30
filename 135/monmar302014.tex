@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+\section{Reducible/Irreducible polynomial}
+\subsection{Reducible}
+f(x) can be written as a product of two polynomials in $\mathbb{F}[x]$ both of
+postive degree.
+\subsection{Irreducible}
+otherwise
+\subsection{Example in $\mathbb{R}$[x]}
+$x^2-a$ is reducible. but $x^2+1$ is irreducible but reducible over $\mathbb{C}$[x].
+\section{Conjugate Roots Theorem}
+Let $f(x)\epsilon \mathbb{C}[x]$ have all coefficients real. If $c\epsilon \mathbb{C}$  is a root of f(x) then so is $\bar{c}$(complex conjugate.
+\section{Example}
+LEt $f(x)=x^4+3x^2+5x+4$ in $\mathbb{Z_7}$
+Write table to find all roots.\\
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+x & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\ 
+\hline 
+f(x) & 4 & 6 & 0 & 1 & 6 & 1&3 \\ 
+\hline 
+\end{tabular} \\
+so x=2 is the only root of f(x). Thus (x-2) is a factor.
+
+Apply DAP over $\mathbb{Z_7}$ divide f(x) by (x-2)\\
+\textbf{Answer} $h(x)=x^3+2x^2+5$\\
+\textbf{Key Point} If $\alpha$ is a root of h(x) then by FT and TD $\alpha$ is a root of  f(x).\\
+2 is a root fo h(x) so h(2)=0 \\divide by (x-2) to get $k(x)=x^2+4x+1$\\ Check root of k(x) to be root of f(x). $k(2)=2\neq 0$ \\Thus k(x) has no roots over $\mathbb{Z_7} $\\ hence k(x) is irreducible over $\mathbb{Z_7}$\\ \textbf{Conclusion} $f(x)=(x-2)^2(x^2+4x+1$. 
+\section{Proof of CPN}
+Restate CPN:
+Let $f(x)\epsilon \mathbb{C}[x]$ of degree n. Then $\exists n$ complex roots not necessarily distinct.  s.t. f(x) factors into products of n linear factors. 
+\subsection{Proof}
+induction on f(x) deg n
+\\
+\begin{enumerate}
+\item Basis: n=0 then $f(x)=a_n$
+\item Hypothesis: $\exists k \epsilon N \cup$ {0} trie for polynomia of degree k.
+By FTA
+\end{enumerate}
+\end{document}
