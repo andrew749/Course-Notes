@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\title{MATH135 Factoring Polynomials}
+\author{Andrew Codispoti}
+\maketitle
+\section{DAP proof}
+Induction on degree of f(x).
+\\
+\begin{enumerate}
+\item f(x) is 0 polynomial. 
+\item deg(g(x)) is zero. say $g(x)=\beta (constant)$ take $q(x)=\frac{f(x)}{\beta}, r(x)=0$
+\item $\deg{g(x)}> \deg{f(x)}$ Take q(x)=0 r(x)=f(x)
+\end{enumerate}
+Assume $\deg{g(x)}=m>0$\\
+\textbf{Strong Induction Hypothesis:}\ For some $k\geq m $ assume result holds for all polynomials of f(x)of $deg< k_0$
+\\
+\textbf{Inductino Step }
+consider $f(x)-\frac{a_k}{b_m}x^{k-m}g(x)$; this has degree $<$ k. Therefore by Induction hypothesis, it can be written as:$q(x)g(x)+r(x)$. Thus $f(x)=(\frac{a_k}{b_m}x^{k-m} +q(x))g(x)+r(x)$
+\end{document}
